@@ -3,4 +3,5 @@
 // //
 let incoming = require(`./data2.js`);
 console.log(incoming.outgoingTests[0]["Test results"]);
+console.log(incoming.outgoingTests[1]["Test results"]);
 
