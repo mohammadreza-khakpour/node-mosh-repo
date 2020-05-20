@@ -11,9 +11,14 @@
 // myEmitter.on(`a-message`,()=>{console.log(`some message`)});
 // myEmitter.emit(`a-message`);
 /////// now adding event arguments to it
-const myEE01 = require(`events`);
-const myEE = new myEE01();
-// listener:
-myEE.on(`noise`,(aargument)=>{console.log(aargument)});
-// emitter:
-myEE.emit(`noise`,{userId:574, userName: `natalia bowman`});
+// const myEE01 = require(`events`);
+// const myEE = new myEE01();
+// // listener:
+// myEE.on(`noise`,(aargument)=>{console.log(aargument)});
+// // emitter:
+// myEE.emit(`noise`,{userId:574, userName: `natalia bowman`});
+////////////////////
+const Logger = require(`./logger`);
+const myLoggerInstance = new Logger();
+myLoggerInstance.on(`emitmessage`,(argz)=>{console.log(argz)})
+myLoggerInstance.log(`hello`);
